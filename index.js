@@ -22,6 +22,8 @@ async function generatePrompt() {
 
 function startGame() {
     generatePrompt();
+    startTimer();
+    document.getElementById("startButton").disabled = true;
 }
 
 function randomLetterGenerator() {
@@ -31,4 +33,21 @@ function randomLetterGenerator() {
 
 function randomNumberGenerator() {
     return Math.floor(Math.random() * 5) + 3;
+}
+
+function startTimer() {
+    let timeLeft = 60;
+    const timerDiv = document.getElementById("timer");
+    const timer = setInterval(() => {
+    timeLeft--;
+    timerDiv.innerText = `Time Left: ${timeLeft} Secends`
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        endGame();
+    }
+}, 1000);
+}
+
+function endGame() {
+    document.getElementById("startButton").disabled = false;
 }
