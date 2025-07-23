@@ -13,7 +13,7 @@ async function generatePrompt() {
         body: JSON.stringify({
             "messages": [{
                 "role": "user",
-                "content": `Give me a thing to draw, the first letter of the sentence must be ${randomLetterGenerator()}, It must be something that is fairly easy to recognize, also the number of characters in the sentence must be ${randomNumberGenerator()}, name only the thing, no other text, including no thinking process, if a word isn't good, put another one, NEVER! put anything that is not explicitly the thing to draw`
+                "content": `Give me a thing to draw, the first letter of the sentence must be ${randomLetterGenerator()}, It must be something that is fairly easy to recognize, also the number of characters in the sentence must be ${randomNumberGenerator()}, name only the thing, no other text, including no thinking process, if a word isn't good, put another one, NEVER! put anything that is not explicitly the thing to draw (including x is too long or x is too short), no thinking proccess writing!!!!.`
             }]
         })
     });
@@ -126,3 +126,8 @@ canvas.addEventListener("touchend", (e) => {
     isDrawing = false;
 });
 });
+
+function changeColor(color) {
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+}

@@ -12,6 +12,27 @@
     <div id="prompt">Prompt: </div>
     <div id="timer">Time Left: 60 Seconds</div>
     <canvas id="drawingCanvas" width="800" height="600" style="border: 1px solid #000000; max-width: 95vw; height: auto;"></canvas><br><br>
+    <div id="colorPicker">
+        <button style="background-color: #FFFFFF;" id="whiteButton" onClick="changeColor('#FFFFFF')">White</button>
+        <button style="background-color: #c0c0c0;" id="silverButton" onClick="changeColor('#c0c0c0')">Silver</button>
+        <button style="background-color: #808080;" id="grayButton" onClick="changeColor('#808080')">Gray</button>
+        <button style="background-color: #000000;" id="blackButton" onClick="changeColor('#000000')">Black</button>
+        <button style="background-color: #FF0000;" id="redButton" onClick="changeColor('#FF0000')">Red</button>
+        <button style="background-color: #800000;" id="maroonButton" onClick="changeColor('#800000')">Maroon</button>
+        <button style="background-color: #FFFF00;" id="yellowButton" onClick="changeColor('#FFFF00')">Yellow</button>
+        <button style="background-color: #808000;" id="oliveButton" onClick="changeColor('#808000')">Olive</button>
+        <button style="background-color: #00ff00;" id="limeButton" onClick="changeColor('#00ff00')">Lime</button>
+        <button style="background-color: #008000;" id="greenButton" onClick="changeColor('#008000')">Green</button>
+        <button style="background-color: #00ffff;" id="aquaButton" onClick="changeColor('#00ffff')">Aqua</button>
+        <button style="background-color: #008080;" id="tealButton" onClick="changeColor('#008080')">Teal</button>
+        <button style="background-color: #0000ff;" id="blueButton" onClick="changeColor('#0000ff')">Blue</button>
+        <button style="background-color: #000080;" id="navyButton" onClick="changeColor('#000080')">Navy</button>   
+        <button style="background-color: #ff00ff;" id="fuchsiaButton" onClick="changeColor('#ff00ff')">Fuchsia</button>
+        <button style="background-color: #800080;" id="purpleButton" onClick="changeColor('#800080')">Purple</button>
+
+        <input type="color" id="colorInput" value="#000000" onchange="changeColor(this.value)">
+    </div>
+    <br><br>
     <button id="startButton" onclick="startGame()">Start</button>
 </body>
 </html>
